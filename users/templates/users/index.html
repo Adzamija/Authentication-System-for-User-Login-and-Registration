@@ -1,0 +1,33 @@
+{% extends "users/layout.html" %}
+{% load static %}
+{% block head %}
+    <link href="{% static 'users/heroes.css' %}" rel="stylesheet">
+{% endblock %}
+{% block title %}
+    Starting page
+{% endblock %}
+{% block body %}
+    <header>
+        <div class="container">
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <div class="col-md-3 mb-2 mb-md-0">
+                <a href="{% url 'index' %}" class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <img class="bi d-block mx-auto mb-4" src="https://www.svgrepo.com/show/509008/avatar-thinking-2.svg" alt="" width="40" height="32">
+                </a>
+            </div>
+        
+            <div class="col-md-3 text-end">
+                <a href="{% url 'login' %}" class="btn btn-outline-primary me-2">Login</a>
+                <a href="{% url 'register' %}" class="btn btn-primary">Sign-up</a>
+            </div>
+            </header>
+        </div>
+    </header>
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://www.svgrepo.com/show/509008/avatar-thinking-2.svg" alt="" width="72" height="57">
+        <h1 class="display-5 fw-bold text-body-emphasis">DEMO</h1>
+        <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">If you're interested in seeing the behind-the-scenes development process of the login and register forms, I can provide you with a demonstration.To start, you can simply click on the "Login" or "Sign-up" button on the website or application, which will take you to the relevant form.</p>
+        </div>
+    </div>
+{% endblock %}

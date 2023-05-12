@@ -1,0 +1,32 @@
+{% extends "users/layout.html" %}
+{% load static %}
+{% block head %}
+    <link href="{% static 'users/heroes.css' %}" rel="stylesheet">
+{% endblock %}
+{% block title %}
+    Home
+{% endblock %}
+{% block body %}
+    <header>
+        <div class="container">
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <div class="col-md-3 mb-2 mb-md-0">
+                <a href="{% url 'index' %}" class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <img class="bi d-block mx-auto mb-4" src="https://www.svgrepo.com/show/509008/avatar-thinking-2.svg" alt="" width="40" height="32">
+                </a>
+            </div>
+        
+            <div class="col-md-3 text-end">
+                <a href="{% url 'logout' %}" class="btn btn-outline-primary me-2">Logout</a>
+            </div>
+            </header>
+        </div>
+    </header>
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://www.svgrepo.com/show/509008/avatar-thinking-2.svg" alt="" width="72" height="57">
+        <h1 class="display-5 fw-bold text-body-emphasis">Hello, {{ request.user }}</h1>
+        <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Thank you for your time.</p>
+        </div>
+    </div>
+{% endblock %}
